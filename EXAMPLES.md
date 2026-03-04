@@ -50,6 +50,20 @@ const records = await client.read({
 console.log(records);
 ```
 
+## 4.1 Read with context
+
+```ts
+const records = await client.read({
+	model: "res.partner",
+	ids: [1, 2, 3],
+	fields: ["name", "email"],
+	context: {
+		lang: "es_ES",
+		tz: "Europe/Madrid",
+	},
+});
+```
+
 ## 5. Create record
 
 ```ts
@@ -130,3 +144,10 @@ const ids = await client.search({
 	],
 });
 ```
+
+## Notes
+
+- `apiKey` can be an Odoo API key or user password.
+- `companyId` is applied automatically in request context as:
+  - `allowed_company_ids: [companyId]`
+  - `company_id: companyId`

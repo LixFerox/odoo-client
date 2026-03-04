@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for contributing to `odoo-client`.
+Thanks for your interest in contributing to `odoo-client`.
 
 ## Requirements
 
@@ -20,7 +20,15 @@ bun run check
 bun run build
 ```
 
-Please run these commands before opening a Pull Request.
+Please run all checks before opening a pull request.
+
+## Where to Contribute
+
+- Bug reports
+- Documentation improvements
+- Type safety improvements
+- XML-RPC behavior fixes
+- New model helper methods (while keeping API stable)
 
 ## Branch and PR workflow
 
@@ -38,6 +46,7 @@ Please run these commands before opening a Pull Request.
 - Prefer strict typing over `any`.
 - Keep XML-RPC behavior aligned with Odoo docs.
 - Preserve Bun-based tooling in this repository.
+- Avoid breaking changes without discussion.
 
 ## Commit message suggestion
 
@@ -46,6 +55,13 @@ Use clear, imperative messages, for example:
 - `feat: add execute_kw helper`
 - `fix: include company context in search`
 - `docs: update examples for searchCount`
+
+## Pull Request Checklist
+
+- Code compiles (`bun run typecheck`)
+- Lint/format passes (`bun run check`)
+- Build passes (`bun run build`)
+- Docs updated when API/behavior changes
 
 ## Questions
 
