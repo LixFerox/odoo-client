@@ -1,0 +1,22 @@
+export { OdooClient } from "./base";
+export type {
+	Copy,
+	Create,
+	LogicalComparator,
+	LogicalOperator16,
+	LogicalOperator17,
+	LogicalOperator18,
+	LogicalOperator19,
+	LogicalOperatorBase,
+	LogicalOperatorByVersion,
+	OdooCondition,
+	OdooContext,
+	OdooDomain,
+	OdooVersion,
+	OrderBy,
+	Read,
+	Search,
+	SearchCount,
+	Unlink,
+	Write,
+} from "./types";
