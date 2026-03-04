@@ -4,7 +4,7 @@
 	"author": "LixFerox",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/LixFerox/odoo-client.git"
+		"url": "git+https://github.com/LixFerox/odoo-client.git"
 	},
 	"main": "./dist/index.cjs",
 	"module": "./dist/index.js",
