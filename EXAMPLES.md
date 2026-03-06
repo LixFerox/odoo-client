@@ -3,7 +3,7 @@
 ## 1. Create client
 
 ```ts
-import { OdooClient } from "odoo-client";
+import { OdooClient } from "@lixferox/odoo-client";
 
 const client = new OdooClient({
 	baseUrl: "https://your-odoo-instance.com",

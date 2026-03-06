@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for your interest in contributing to `odoo-client`.
+Thanks for your interest in contributing to `@lixferox/odoo-client`.
 
 ## Requirements
 

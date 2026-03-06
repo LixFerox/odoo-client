@@ -1,6 +1,6 @@
-# odoo-client
+# @lixferox/odoo-client
 
-[![npm version](https://img.shields.io/npm/v/odoo-client.svg)](https://www.npmjs.com/package/odoo-client)
+[![npm version](https://img.shields.io/npm/v/@lixferox/odoo-client.svg)](https://www.npmjs.com/package/@lixferox/odoo-client)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
 
 TypeScript SDK for Odoo XML-RPC (`/xmlrpc/2/common` and `/xmlrpc/2/object`).
@@ -61,13 +61,13 @@ TypeScript SDK for Odoo XML-RPC (`/xmlrpc/2/common` and `/xmlrpc/2/object`).
 ## Installation
 
 ```bash
-bun add odoo-client
+bun add @lixferox/odoo-client
 ```
 
 Or with npm:
 
 ```bash
-npm i odoo-client
+npm i @lixferox/odoo-client
 ```
 
 ## Usage
@@ -75,7 +75,7 @@ npm i odoo-client
 ### Basic Setup
 
 ```ts
-import { OdooClient } from "odoo-client";
+import { OdooClient } from "@lixferox/odoo-client";
 
 const client = new OdooClient({
 	baseUrl: "https://your-odoo-instance.com",

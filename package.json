@@ -1,5 +1,5 @@
 {
-	"name": "odoo-client",
+	"name": "@lixferox/odoo-client",
 	"version": "1.0.0",
 	"author": "LixFerox",
 	"repository": {
@@ -36,6 +36,9 @@
 		"LICENSE"
 	],
 	"homepage": "https://github.com/LixFerox/odoo-client#readme",
+	"publishConfig": {
+		"access": "public"
+	},
 	"keywords": [
 		"odoo",
 		"client",
