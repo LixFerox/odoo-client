@@ -125,7 +125,6 @@ jobs:
   integration-odoo:
     name: Integration Odoo (Bun latest)
     runs-on: ubuntu-latest
-    if: ${{ secrets.ODOO_TEST_BASE_URL != '' && secrets.ODOO_TEST_DATABASE != '' && secrets.ODOO_TEST_EMAIL != '' && secrets.ODOO_TEST_API_KEY != '' }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
