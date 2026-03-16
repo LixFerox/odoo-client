@@ -15,6 +15,7 @@ bun install
 ## Local checks
 
 ```bash
+bun run test
 bun run typecheck
 bun run check
 bun run build
@@ -59,6 +60,7 @@ Use clear, imperative messages, for example:
 ## Pull Request Checklist
 
 - Code compiles (`bun run typecheck`)
+- Unit tests pass (`bun run test`)
 - Lint/format passes (`bun run check`)
 - Build passes (`bun run build`)
 - Docs updated when API/behavior changes

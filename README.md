@@ -114,6 +114,8 @@ new OdooClient({
 });
 ```
 
+`version` is optional metadata for version-aware typing/workflows and currently does not change XML-RPC runtime requests.
+
 ### Methods
 
 - `create(args): Promise<number | number[]>`
@@ -165,10 +167,28 @@ src/
 
 ```bash
 bun install
+bun run test
+bun run test:integration # optional (requires Odoo env vars)
 bun run typecheck
 bun run check
 bun run build
 ```
+
+## Integration Test (Optional)
+
+Run against a real Odoo instance:
+
+```bash
+ODOO_TEST_BASE_URL="https://your-odoo-instance.com" \
+ODOO_TEST_DATABASE="your_db" \
+ODOO_TEST_EMAIL="api-user@example.com" \
+ODOO_TEST_API_KEY="your_api_key_or_password" \
+ODOO_TEST_COMPANY_ID="1" \
+bun run test:integration
+```
+
+Required: `ODOO_TEST_BASE_URL`, `ODOO_TEST_DATABASE`, `ODOO_TEST_EMAIL`, `ODOO_TEST_API_KEY`  
+Optional: `ODOO_TEST_COMPANY_ID`
 
 ## Security
 

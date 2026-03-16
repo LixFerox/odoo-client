@@ -89,7 +89,7 @@ export class OdooClient {
 	}
 
 	private buildContext(context?: OdooContext): OdooContext | undefined {
-		if (!this.companyId) {
+		if (typeof this.companyId !== "number") {
 			return context;
 		}
 		return {
@@ -120,7 +120,7 @@ export class OdooClient {
 	}
 
 	private async authenticate() {
-		if (this.uid) {
+		if (typeof this.uid === "number") {
 			return this.uid;
 		}
 		const uid = await this.xmlrpcCall<number | false>(
@@ -144,8 +144,9 @@ export class OdooClient {
 		kwargs: ExecuteKwargs = {},
 	) {
 		const uid = await this.authenticate();
-		const payloadKwargs = this.buildContext(kwargs.context)
-			? { ...kwargs, context: this.buildContext(kwargs.context) }
+		const builtContext = this.buildContext(kwargs.context);
+		const payloadKwargs = builtContext
+			? { ...kwargs, context: builtContext }
 			: kwargs;
 
 		return this.xmlrpcCall<T>(this.getObjectClient(), "execute_kw", [
